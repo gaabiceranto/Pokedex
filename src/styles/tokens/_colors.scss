@@ -1,0 +1,37 @@
+:root {
+  // Cores base
+  --color-white: #FFFFFF;
+  --color-black: #1E1E1E;
+  --color-gray-1: #F2F2F7;
+  --color-gray-2: #D9D9D9;
+  --color-gray-3: #757575;
+  --color-gray-4: #49454F;
+  --color-gray-5: #2C2C2C;
+  --color-gray-6: #263156;
+  --color-gray-7: #212E4C;
+
+  // Cores de fundo
+  --color-bg-primary: var(--color-white);
+  --color-bg-secondary: var(--color-gray-1);
+  --color-bg-card: #F0F3FF;
+
+  // Cores de texto
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-gray-4);
+  --color-text-disabled: var(--color-gray-3);
+  --color-text-inverse: var(--color-white);
+
+  // Cores de tipos de Pokémon 
+  --color-type-grass: #11B047;
+  --color-type-fire: #F57D31;
+  --color-type-water: #6493EB;
+  --color-type-electric: #F9CF30;
+  --color-type-normal: #AAA67F;
+
+  // Cores de borda
+  --color-border: var(--color-gray-2);
+}
+
+
+
+

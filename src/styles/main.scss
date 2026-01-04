@@ -1,0 +1,59 @@
+// Main Stylesheet
+@use "./tokens/colors" as *;
+@use "./tokens/spacing" as *;
+@use "./tokens/typography" as *;
+@use "./tokens/radius" as *;
+@use "./tokens/layout" as *;
+
+// Layout
+@use "./layout/container" as *;
+
+// Componentes
+@use "../components/Header/Header" as *;
+@use "../components/Header/NavigationPill" as *;
+@use "../components/SearchBar/SearchBar" as *;
+@use "../components/PokemonCard/PokemonCard" as *;
+@use "../components/PokemonGrid/PokemonGrid" as *;
+@use "../components/Pagination/Pagination" as *;
+
+// Reset e base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Utilitários para acessibilidade
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
