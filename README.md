@@ -2,6 +2,8 @@
 
 Aplicação de Pokédex desenvolvida com Vanilla JavaScript, Vite e SCSS. Arquitetura modular com nomenclatura BEM e design tokens.
 
+🌐 **Aplicação online**: [https://pokedex-neon-tau.vercel.app](https://pokedex-neon-tau.vercel.app)
+
 ## Tecnologias
 
 - Vanilla JavaScript (ES6+)
@@ -105,6 +107,5 @@ A aplicação inclui:
 - Foco visível em elementos interativos
 - HTML semântico (header, nav, section, etc)
 - Textos alternativos em imagens
-
 
 Este projeto foi desenvolvido como parte de um desafio técnico.
