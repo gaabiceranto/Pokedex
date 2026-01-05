@@ -6,15 +6,15 @@ Aplicação de Pokédex desenvolvida com Vanilla JavaScript, Vite e SCSS. Arquit
 
 ## Tecnologias
 
-- Vanilla JavaScript (ES6+)
-- Vite 5.0
+- JavaScript Vanilla
+- Vite
 - SCSS
 - PokéAPI
 
 ## Funcionalidades
 
-- Listagem de Pokémon com paginação (18 por página)
-- Busca por nome (dispara ao pressionar Enter)
+- Listagem de Pokémon com paginação
+- Busca por nome
 - Paginação com navegação entre páginas
 - Estado sincronizado com URL (query params)
 - Cache de requisições para melhor performance
@@ -31,26 +31,12 @@ Cores, espaçamentos, tipografia e outros valores estão centralizados em variá
 
 Todos os componentes seguem a convenção BEM (Block Element Modifier):
 
-```scss
-.pokemon-card {
-  // block
-  &__image {
-    // element
-    // estilos
-  }
-  &--type-grass {
-    // modifier
-    // estilos
-  }
-}
-```
-
-## Como usar
+## Como usar Localmente
 
 1. Clone o repositório e entre na pasta:
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/gaabiceranto/Pokedex.git
 cd Pokedex
 ```
 
