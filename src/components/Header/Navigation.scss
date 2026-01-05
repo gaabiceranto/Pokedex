@@ -23,6 +23,8 @@
   line-height: var(--line-height-tight);
   text-decoration: none;
   transition: background-color 0.2s ease;
+  color: var(--color-gray-8);
+
 
   &:hover {
     background-color: var(--color-gray-1);
