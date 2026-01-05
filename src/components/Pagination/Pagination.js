@@ -4,10 +4,12 @@ export class Pagination {
   #totalPages = 1;
   #onPageChange;
   #isInitialized = false;
+  #boundHandleClick = null;
 
   constructor(onPageChange, element = null) {
     this.#onPageChange = onPageChange;
     this.#element = element;
+    this.#boundHandleClick = this.#handleClick.bind(this);
   }
 
   get currentPage() {
@@ -59,7 +61,7 @@ export class Pagination {
 
   destroy() {
     if (this.#element) {
-      this.#element.removeEventListener("click", this.#handleClick);
+      this.#element.removeEventListener("click", this.#boundHandleClick);
       this.#element.remove();
       this.#element = null;
       this.#isInitialized = false;
@@ -90,7 +92,7 @@ export class Pagination {
 
   #ensureEvents() {
     if (!this.#isInitialized) {
-      this.#element.addEventListener("click", this.#handleClick);
+      this.#element.addEventListener("click", this.#boundHandleClick);
       this.#isInitialized = true;
     }
   }
@@ -101,7 +103,7 @@ export class Pagination {
     nav.setAttribute("role", "navigation");
     nav.setAttribute("aria-label", "Paginação");
     nav.innerHTML = this.#getHTMLTemplate();
-    nav.addEventListener("click", this.#handleClick);
+    nav.addEventListener("click", this.#boundHandleClick);
     return nav;
   }
 
