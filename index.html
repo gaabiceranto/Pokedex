@@ -5,12 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokédex - Lista de Pokémon</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="./src/assets/images/pokeapi_192_square.png">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    #app:not(.loaded) {
+      visibility: hidden;
+    }
+    #app.loaded {
+      visibility: visible;
+    }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <header class="header" role="banner">
+      <div class="container">
+      <div class="header__logo">
+        <a href="/">
+          <img src="./src/assets/images/logo-pokedex.png" alt="Pokédex" onerror="this.style.display='none'">
+        </a>
+      </div>
+      <nav class="header__nav" role="navigation" aria-label="Navegação principal">
+        <ul class="navigation-list">
+          <li class="navigation-list__item">
+            <a
+              href="#"
+              class="navigation-item navigation-item--active"
+              aria-current="page"
+            >
+              Home
+            </a>
+          </li>
+          <li class="navigation-list__item">
+            <a
+              href="#"
+              class="navigation-item"
+            >
+              Pokédex
+            </a>
+          </li>
+        </ul>
+      </nav>
+      </div>
+    </header>
 
+    <div class="search-bar" role="search">
+      <div class="container">
+        <div class="search-bar__state-layer">
+          <div class="search-bar__content">
+            <input
+              type="text"
+              class="search-bar__input"
+              placeholder="Faça uma busca pelo nome do pokémon"
+              aria-label="Buscar Pokémon"
+              autocomplete="off"
+            >
+          </div>
+          <div class="search-bar__trailing-elements">
+            <div class="search-bar__search-icon" aria-hidden="true">
+              <img src="./src/assets/icons/search-icon.svg" alt="" class="search-bar__icon" aria-hidden="true">
+            </div>
+            <button
+              type="button"
+              class="search-bar__clear-button"
+              aria-label="Limpar busca"
+              title="Limpar busca"
+            >
+              <img src="./src/assets/icons/close-icon.svg" alt="" class="search-bar__clear-icon" aria-hidden="true">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="pokemon-grid container" role="region" aria-label="Lista de Pokémon">
+    </section>
+
+    <nav class="pagination" role="navigation" aria-label="Paginação">
+    </nav>
+  </div>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
 
