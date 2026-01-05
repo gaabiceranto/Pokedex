@@ -9,8 +9,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <header class="header" role="banner">
+      <div class="container">
+      <div class="header__logo">
+        <a href="/">
+          <img src="./src/assets/images/logo-pokedex.png" alt="Pokédex" onerror="this.style.display='none'">
+        </a>
+      </div>
+      <nav class="header__nav" role="navigation" aria-label="Navegação principal">
+        <ul class="navigation-list">
+          <li class="navigation-list__item">
+            <a
+              href="#"
+              class="navigation-item navigation-item--active"
+              aria-current="page"
+            >
+              Home
+            </a>
+          </li>
+          <li class="navigation-list__item">
+            <a
+              href="#"
+              class="navigation-item"
+            >
+              Pokédex
+            </a>
+          </li>
+        </ul>
+      </nav>
+      </div>
+    </header>
 
+
+    <nav class="pagination" role="navigation" aria-label="Paginação">
+    </nav>
+  </div>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
 
